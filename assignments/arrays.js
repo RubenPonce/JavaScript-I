@@ -75,14 +75,19 @@ let inventory = [
 // ==== Challenge 1 ====
 // The dealer can't recall the information for a car with an id of 33 on his lot. Help the dealer find out which car has an id of 33 by logging the car's year, make, and model in the console log provided to you below:
 console.log(
-  `Car 33 is a ${inventory[32].car_year} ${inventory[32].car_make} ${inventory[32].car_model}`
+  `Car 33 is a ${inventory[32].car_year} ${inventory[32].car_make} ${
+    inventory[32].car_model
+  }`
 );
-
 
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
 let lastCar = 0;
-console.log(`The last car is a ${inventory[inventory.length-1].car_make} ${inventory[inventory.length-1].car_model}`);
+console.log(
+  `The last car is a ${inventory[inventory.length - 1].car_make} ${
+    inventory[inventory.length - 1].car_model
+  }`
+);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
@@ -98,13 +103,15 @@ console.log(carYears);
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
-const oldCars = carYears.filter(year=> year<2000)
+const oldCars = carYears.filter(year => year < 2000);
 console.log(`${oldCars.length} cars are older than the year 2000 `);
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
 
-const BMWAndAudi =inventory.filter(car=> car.car_make==="BMW" || car.car_make==='Audi'  )
+const BMWAndAudi = inventory.filter(
+  car => car.car_make === "BMW" || car.car_make === "Audi"
+);
 
 console.log(JSON.stringify(BMWAndAudi));
 //console.log(BMWAndAudi) looks better
